@@ -15,6 +15,14 @@ while True:
             sub=a-b
             print(f'Summ={summ}')
             print(f'Substraction={sub}')
+            mul = a * b
+            div = a / b
+            print(f'Multiplication={mul}')
+            print(f'Division={div}')
+
+        except ZeroDivisionError:
+            print('Can not divide by 0!, change "b"')
+
         except Exception as e:
             print('You messed up')
             print('e')
