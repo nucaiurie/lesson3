@@ -1,5 +1,5 @@
 print('Hi, this is lesson 3, give me 2 numbers >= 0')
-print('We will be adding and substracting')
+print('We will be adding, substracting, multiplying and dividing (b - divider)')
 #inputtin 2 numbers and doing dirty stuff
 while True:
     print('Give me number "a"')
