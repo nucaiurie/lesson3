@@ -23,7 +23,10 @@ while True:
         t = trick()
         live_or_die(t, a.get("name"))
         break
-    else:
+    elif x == 'run':
         r = run()
         live_or_die(r, a.get("name"))
-    break
+        break
+    else:
+        print('Not an option')
+        continue
