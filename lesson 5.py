@@ -7,6 +7,9 @@ class Electric:
     def __init__(self, name):
         self.name = name
 
+    def __str__(self):
+        return f'name is {self.name}'
+
 
 class Load(Electric):
 
@@ -14,12 +17,12 @@ class Load(Electric):
         super().__init__(name)
         self.resistance = resistance
         self.reactance = reactance
-        self.__n = (random.randint(1, 100) / 100)
 
     def current_load(self, voltage):
-        self.__current = voltage / math.sqrt((self.resistance ** 2) + (self.reactance ** 2))
-        print(f'The current at {voltage}Volt is {round(self.__current, 3)}Amper')
-        return self.__current
+        __n = (random.randint(1, 100) / 100)
+        __current = voltage / math.sqrt((self.resistance ** 2) + (self.reactance ** 2))
+        print(f'The current at {voltage}Volt is {round(__current, 3)}Amper')
+        return __current
 
 
 class Generator(Electric):
@@ -43,4 +46,3 @@ print(f'The load at {load1.name} has R = {load1.resistance} and X = {load1.react
 print(f'The generator at {gen1.name} gives {gen1.power}VA and stable {gen1.voltage}V')
 
 gen1.load_capacity(load1.current_load(gen1.voltage))
-
